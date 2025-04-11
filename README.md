@@ -19,10 +19,10 @@ Requirements
 To run this code you need to have following packages installed on your machine.
 
 - Python
-```
+  ```
   python --version
   Python 3.10.5
-```
+  ```
 - Pip
   ```
   python -m pip --version
@@ -73,7 +73,7 @@ Following changes were made in the code to generate desired output
 
 To execute the code run the following command
 ```
-python importyaml.py endpoints.yaml
+python main.py sample.yaml
 ```
 **Sample output**
 ```
@@ -86,5 +86,6 @@ dev-sre-take-home-exercise-rubric.us-east-1.recruiting-public.fetchrewards.com h
 dev-sre-take-home-exercise-rubric.us-east-1.recruiting-public.fetchrewards.com has 25% availability percentage
 ---
 ```
-**Terminate code**
-To terminate the code press ctrl+c and it should stop the execution giving you an output message like: **Monitoring stopped by user.**
+**Terminate code**  
+To terminate the code press ctrl+c and it should stop the execution giving you an output message like:  
+**Monitoring stopped by user.**
