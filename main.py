@@ -11,12 +11,15 @@ def load_config(file_path):
 # Function to perform health checks
 def check_health(endpoint):
     url = endpoint['url']
-    method = endpoint.get('method')
-    headers = endpoint.get('headers')
-    body = endpoint.get('body')
+    method = endpoint.get('method', 'GET')
+    headers = endpoint.get('headers', {})
+    body = endpoint.get('body', None)
 
     try:
-        response = requests.request(method, url, headers=headers, json=body)
+        if body:
+            response = requests.request(method, url, headers=headers, json=body)
+        else:
+            response = requests.request(method, url, headers=headers)
         if 200 <= response.status_code < 300:
             return "UP"
         else:
